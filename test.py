@@ -1,4 +1,6 @@
 import random
+import math
+
 print("終極密碼規則設定")
 range1=input("設定數字範圍，最低: ")
 range2=input("設定數字範圍，最高: ")
