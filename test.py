@@ -1,18 +1,29 @@
 import random
 import math
+import test1 as t
 
 print("終極密碼規則設定")
-range1=input("設定數字範圍，最低: ")
-range2=input("設定數字範圍，最高: ")
-Fr=input("設定猜的次數: ")
-while str.isdigit(range1) == False or str.isdigit(range2)== False or str.isdigit(Fr)== False or int(range1)>=int(range2) or int(Fr)<=0 :
+
+range1 = input("設定數字範圍，最低: ")
+range2 = input("設定數字範圍，最高: ")
+
+Fr = input("設定猜的次數: ")
+
+if t.check(Fr) == True:
+    print("Corret")
+else:
+    print("False")
+
+while str.isdigit(range1) == False or str.isdigit(range2) == False or str.isdigit(Fr)== False or int(range1)>=int(range2) or int(Fr)<=0 :
     print("輸入數字範圍有誤或輸入非數字，請重新輸入: ")
     range1=input("設定數字範圍，最低: ")
     range2=input("設定數字範圍，最高: ")
     Fr=input("設定猜的次數: ")
+
 range1=int(range1)
 range2=int(range2)
 Fr=int(Fr)
+
 ansnb=int(random.randint(range1,range2))
 print("終極密碼開始，範圍",range1,"~",range2)
 x= input("請輸入正整數: ")
